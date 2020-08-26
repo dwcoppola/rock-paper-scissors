@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>
+Rock, Paper, Scissors Games
+</title>
+</head>
+<body>
+<script>
+var win = 0
+var lose = 0
+var draw = 0
+var i
+var playerSelection
+
+
+
+for (i = 0; i < 5; i++) {
+
+//This is the computer's selection, based on a randomly generated number from 1 to 3.
+computerSelection = Math.floor((Math.random() * 3) + 1);
+switch (computerSelection) { 
+case 1: 
+computerSelection = "rock";
+computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
+break;
+case 2: 
+computerSelection = "paper";
+computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
+break;
+case 3: 
+computerSelection = "scissors";
+computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
+}
+
+playerSelection = prompt("Rock, Paper, or Scissors? Best out of 5!","Rock")
+playerSelection = playerSelection.toLowerCase();
+playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+if (playerSelection != "Rock" && playerSelection != "Paper" && playerSelection != "Scissors") {
+console.log(`${playerSelection} is not an acceptable move. Please try again!`)
+-- i
+} else {
+playGame (playerSelection,computerSelection)
+}
+}
+if (win > lose) {
+console.log(`\n`+`VICTORY! YOU ARE THE FIRST TO WIN 3 MATCHES!`+`\n`+`Player Wins - ${win}`+`\n`+`Computer Wins - ${lose}`+`\n`+`Number of Ties - ${draw}`)
+} else {
+console.log(`\n`+`RATS! THE COMPUTER HAS WON 3 MATCHES!`+`\n`+`Player Wins - ${win}`+`\n`+`Computer Wins - ${lose}`+`\n`+`Number of Ties - ${draw}`)
+}
+function playGame (playerSelection,computerSelection) {
+switch (computerSelection) {
+case "Rock":
+if (playerSelection == computerSelection) {
+console.log(`You chose ${playerSelection}, and the computer also chose ${computerSelection}. It's a tie! Doesn't count!`)
+draw = draw + 1
+-- i
+} else if (playerSelection == "Paper") { 
+console.log(`You chose ${playerSelection}, and the computer chose ${computerSelection}. You win!`)
+win = win + 1
+if (win == 3) {
+i = 5
+}
+} else {
+console.log(`You chose ${playerSelection}, but the computer chose ${computerSelection}. You lose!`)
+lose = lose + 1
+if (lose == 3) {
+i = 5
+}
+}
+break;
+case "Paper":
+if (playerSelection == computerSelection) {
+console.log(`You chose ${playerSelection}, and the computer also chose ${computerSelection}.  It's a tie! Doesn't count!`)
+draw = draw + 1
+-- i
+} else if (playerSelection == "Scissors") { 
+console.log(`The computer chose ${computerSelection}, and you chose ${playerSelection}. You win!`)
+win = win + 1
+if (win == 3) {
+i = 5
+}
+} else {
+console.log(`You chose ${playerSelection}, but the computer chose ${computerSelection}. You lose!`)
+lose = lose + 1
+if (lose == 3) {
+i = 5
+}
+}
+break;
+case "Scissors":
+if (playerSelection == computerSelection) {
+console.log(`You chose ${playerSelection}, and the computer also chose ${computerSelection}.  It's a tie! Doesn't count!`)
+draw = draw + 1
+-- i
+} else if (playerSelection == "Rock") { 
+console.log(`The computer chose ${computerSelection}. You chose ${playerSelection}. You win!`)
+win = win + 1
+if (win == 3) {
+i = 5
+}
+} else {
+console.log(`You chose ${playerSelection}, but the computer chose ${computerSelection}. You lose!`)
+lose = lose + 1
+if (lose == 3) {
+i = 5
+}
+}
+}
+}
+</script>
+</body>
+</html>
+
