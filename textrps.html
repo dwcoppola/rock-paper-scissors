@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>
-Rock, Paper, Scissors Games
+Rock, Paper, Scissors Game
 </title>
 </head>
 <body>
@@ -11,11 +11,7 @@ var lose = 0
 var draw = 0
 var i
 var playerSelection
-
-
-
 for (i = 0; i < 5; i++) {
-
 //This is the computer's selection, based on a randomly generated number from 1 to 3.
 computerSelection = Math.floor((Math.random() * 3) + 1);
 switch (computerSelection) { 
@@ -31,7 +27,6 @@ case 3:
 computerSelection = "scissors";
 computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
 }
-
 playerSelection = prompt("Rock, Paper, or Scissors? Best out of 5!","Rock")
 playerSelection = playerSelection.toLowerCase();
 playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
@@ -110,4 +105,3 @@ i = 5
 </script>
 </body>
 </html>
-
