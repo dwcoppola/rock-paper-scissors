@@ -1,33 +1,35 @@
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock, Paper, Scissors Game</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<div>
-  <h3>Select your move using the buttons below:</h3>
-</div>
-<div id="user-interface">
-  <button onclick=playerPick("Rock") id="rock-button">ROCK</button>
-  <button onclick=playerPick("Paper") id="paper-button">PAPER</button>
-  <button onclick=playerPick("Scissors") id="scissors-button">SCISSORS</button>
-</div>
-<div id="game-text">
-  <table style="margin-top: 20px;">
-<tr>
-  <th>W</th>
-  <th>L</th>
-  <th>T</th>
-</tr>
-<tr>
-  <td id="win"></td>
-  <td id="lose"></td>
-  <td id="draw"></td>
-</tr>
-  </table>
-  <h3>The play by play:</h3>
-</div>
-<script src="script.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock, Paper, Scissors Game</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h3>Select your move using the buttons below:</h3>
+        </div>
+        <div id="user-interface">
+            <button onclick=playerPick("Rock") id="rock-button">ROCK</button>
+            <button onclick=playerPick("Paper") id="paper-button">PAPER</button>
+            <button onclick=playerPick("Scissors") id="scissors-button">SCISSORS</button>
+        </div>
+        <div id="game-text">
+            <table style="margin-top: 20px;">
+                <tr>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                </tr>
+                <tr>
+                    <td id="win"></td>
+                    <td id="lose"></td>
+                    <td id="draw"></td>
+                </tr>
+            </table>
+            <h2>The play by play:</h2>
+	    <p id="turn-text"></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
