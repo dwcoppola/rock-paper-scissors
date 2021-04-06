@@ -25,7 +25,7 @@ function playerPick(playerSelection) {
             } else {
                 outcome = "You Lose!";
                 lose++;
-            };
+            }
             break;
         case "Paper":
             if (playerSelection === "Paper") {
@@ -37,7 +37,7 @@ function playerPick(playerSelection) {
             } else {
                 outcome = "You Lose!";
                 lose++;
-            };
+            }
             break;
         case "Scissors":
             if (playerSelection === "Scissors") {
@@ -49,11 +49,11 @@ function playerPick(playerSelection) {
             } else {
                 outcome = "You Lose!"
                 lose++;
-            };
-    };
+            }
+    }
     winCount.textContent = win; 
     loseCount.textContent = lose;
     drawCount.textContent = draw;
     var turnText = document.getElementById('turn-text');
     turnText.innerHTML = `You chose ${playerSelection} and the computer chose ${computerSelection}. ${outcome}`;
-};
+}
